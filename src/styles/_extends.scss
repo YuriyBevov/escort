@@ -126,6 +126,24 @@
   }
 }
 
+.section-decorated {
+  position: relative;
+  padding-top: 250px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-image: url("../assets/img/section-decoration-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+}
+
 .main-link-transition {
   color: var(--white);
   transition: color var(--main-transition);
