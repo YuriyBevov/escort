@@ -1,0 +1,32 @@
+.main-btn {
+  @extend .flex-centered-content;
+
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  width: fit-content;
+  height: fit-content;
+  min-height: 40px;
+
+  padding: 24px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+
+  color: var(--white);
+  background-color: var(--accent);
+
+  cursor: pointer;
+  transition: all var(--main-transition);
+
+  &:hover,
+  &:focus {
+    border-color: var(--white);
+    background-color: var(--white);
+    color: var(--accent);
+  }
+}

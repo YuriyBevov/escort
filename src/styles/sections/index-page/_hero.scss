@@ -1,0 +1,21 @@
+.hero {
+  min-height: 1000px;
+  padding: 200px 0;
+
+  background-image: url("../assets/img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__desc {
+    margin-bottom: 75px;
+    p {
+      line-height: 30px;
+      margin-bottom: 25px;
+
+      span {
+        color: var(--accent);
+      }
+    }
+  }
+}

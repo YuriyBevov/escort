@@ -1,0 +1,14 @@
+.catalog {
+  padding-bottom: 100px;
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-bottom: 60px;
+  }
+}

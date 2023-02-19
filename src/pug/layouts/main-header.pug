@@ -1,2 +1,23 @@
-header
-  p header
+header.header
+  .container.header__container
+    a(href="#" aria-label="На главную").header__logo.logo
+      img(src="../assets/img/main-logo.svg", alt="" width="176" height="40")
+      span Элитное эскорт агенство
+
+    .header__nav
+      include ../components/nav
+
+    .header__contacts
+      .header__phones
+        include ../components/phones
+      .header__social
+        include ../components/social
+
+      a(href="#").main-btn.header__callback Заказать звонок
+
+
+    .header__badge
+      svg(width="18" height="18")
+        use(xlink:href="./assets/sprite.svg#icon-clock")
+
+      span Работаем 24/7

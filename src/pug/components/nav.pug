@@ -1,0 +1,31 @@
+nav.nav
+  ul.nav__list
+    li.nav__list-item
+      a(href="#") Вопрос/ответ
+
+    li.nav__list-item
+      a(href="#") Об эскорт-агенстве
+
+    li.nav__list-item
+      a(href="#") Модели
+
+    li.nav__list-item.nav__list-item--nested
+      a(href="#") Услуги
+        svg(width="8" height="4")
+          use(xlink:href="./assets/sprite.svg#icon-dropdown-arrow")
+
+      .nav__list-item-inner
+        ul
+          li
+            a(href="#") Элитные знакомства с&nbsp;девушками
+          li
+            a(href="#") Организация мальчишника
+          li
+            a(href="#") Элитные путешествия с&nbsp;эскорт&nbsp;моделями
+          li
+            a(href="#") Пригласить эскорт&nbsp;модель
+          li
+            a(href="#") Знакомства с&nbsp;медийными&nbsp;девушками
+
+    li.nav__list-item
+      a(href="#") Контакты

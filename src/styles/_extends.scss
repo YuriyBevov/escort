@@ -31,6 +31,156 @@
 
 /*text*/
 
+.main-title {
+  font-family: var(--secondary-font);
+  font-size: 120px;
+  font-weight: 200;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+
+  max-width: 60%;
+}
+
+.undertext-btn {
+  @extend .flex-column;
+  width: 100%;
+  max-width: 280px;
+
+  a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    color: var(--gray);
+  }
+}
+
+.section-title {
+  span {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 0.9;
+  }
+}
+
+.btn-outline {
+    @extend .flex-centered-content;
+    font-family: var(--secondary-font);
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border: 1px solid #5c594f;
+    border-radius: 4px;
+
+    color: var(--white);
+}
+
+.iconed-btn {
+  @extend .btn-outline;
+  background-color: transparent;
+
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--info);
+
+  padding: 14px 20px;
+
+  transition: background-color var(--main-transition);
+
+  span {
+    font-family: var(--secondary-font);
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: color var(--main-transition);
+  }
+
+  svg {
+    margin-right: 20px;
+  }
+
+  &--green {
+    border-color: var(--success);
+
+    svg {
+      fill: var(--success);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--white);
+    span {
+      color: var(--success);
+    }
+  }
+}
+
+.main-link-transition {
+  color: var(--white);
+  transition: color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+.title-md {
+  font-family: var(--secondary-font);
+  font-size: 44px;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.section-text {
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+.logo-mark {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    content: '*';
+
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../assets/img/logo_sm.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.clipped-title {
+  color: transparent;
+  background-clip: text;
+  background-image: url("../assets/img/text-underlay.jpg");
+  background-position: center;
+}
+
 .text-truncate {
     white-space: nowrap;
     overflow: hidden;

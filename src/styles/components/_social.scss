@@ -1,0 +1,18 @@
+.social {
+  a:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  a {
+    svg {
+      transition: fill var(--main-transition);
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--accent);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.access {
+  margin-bottom: 50px;
+
+  &__wrapper {
+    position: relative;
+    padding-left: 110px;
+    padding-right: 140px;
+    padding-bottom: 80px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 75px;
+      height: 90px;
+      background-image: url("../assets/img/diamond.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      content: "";
+      width: 56%;
+      height: 1px;
+      background-color: var(--accent);
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: auto 280px;
+
+    grid-column-gap: 30px;
+  }
+
+  &__text {
+    max-width: 620px;
+  }
+
+  &__get-btn {
+    margin-bottom: 20px;
+  }
+}

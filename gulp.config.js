@@ -57,9 +57,9 @@ const PATHS = {
   },
 
   sprite: {
-    src: `${SOURCE_PATH}assets/icons/**/*-icon.svg`,
+    src: `${SOURCE_PATH}assets/icons/**/icon-*.svg`,
     spriteFileName: `sprite.svg`,
-    watchSrc: `${SOURCE_PATH}assets/icons/**/*-icon.svg`,
+    watchSrc: `${SOURCE_PATH}assets/icons/**/icon-*.svg`,
     dest: `${BUILD_PATH}assets/`
   },
 
