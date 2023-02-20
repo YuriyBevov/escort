@@ -1,0 +1,23 @@
+include ../../mixins/review-card
+
+section.review
+  .container
+    .review__title.section-title
+      span Отзывы
+
+      .review-slider-controls
+        .swiper-button-prev.review-slider-button-prev
+          svg(width="12" height="12")
+            use(xlink:href="./assets/sprite.svg#icon-slider-arrow")
+        .swiper-button-next.review-slider-button-next
+          svg(width="14" height="14")
+            use(xlink:href="./assets/sprite.svg#icon-slider-arrow")
+  .container-fluid
+    .review__slider.review-slider
+      .swiper-wrapper.review-slider-wrapper
+        each item in [1,2,3,4,5,6,7]
+          .swiper-slide
+            +review-card('Раньше не хотел заказывать эскорт, так как думал, что в таких агентствах работают девушки легкого поведения. Но был приятно удивлен, что эскорт услуги предоставляют образованные и начитанные девушки. Однозначно рекомендую это агентство.')
+
+        .swiper-slide
+            +review-card('Раньше не хотел заказывать эскорт, так как думал, что в таких агентствах работают девушки легкого поведения. Но был приятно удивлен, что эскорт услуги предоставляют образованные и начитанные девушки. Однозначно рекомендую это агентство. Раньше не хотел заказывать эскорт, так как думал, что в таких агентствах работают девушки легкого поведения. Но был приятно удивлен, что эскорт услуги предоставляют образованные и начитанные девушки. Однозначно рекомендую это агентство.')

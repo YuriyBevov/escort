@@ -271,6 +271,15 @@
   }
 }
 
+.section-line {
+  content: " ";
+  display: block;
+  width: 56%;
+  height: 1px;
+  background-color: #5F5743;
+  position: absolute;
+}
+
 /*containers*/
 
 .container {
@@ -282,8 +291,11 @@
 .container-fluid {
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--container-offset);
   max-width: var(--container-fluid-width);
+
+  @include m-b-tablet-down {
+    padding: 0 var(--container-offset);
+  }
 }
 
 

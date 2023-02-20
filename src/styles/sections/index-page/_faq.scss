@@ -1,0 +1,64 @@
+.faq {
+  margin-bottom: 80px;
+
+  &__container {
+    position: relative;
+    padding-bottom: 50px;
+
+    &::after {
+      @extend .section-line;
+      top: 100%;
+      right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+
+  &__footer {
+
+    &-text {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 25px;
+
+        &:not(:first-of-type) {
+          height: 0;
+          opacity: 0;
+          visibility: hidden;
+          margin-bottom: 0;
+          transition: opacity var(--slow-transition), margin var(--slow-transition) ;
+        }
+      }
+
+      &.active {
+        p {
+          height: 100%;
+          opacity: 1;
+          visibility: visible;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    button {
+      @extend .button-default;
+      font-weight: 400;
+      font-size: 14px;
+      padding: 10px 0;
+      color: var(--gray);
+      text-decoration: underline;
+    }
+  }
+}

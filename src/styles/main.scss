@@ -5,7 +5,6 @@
 @import "fonts";
 @import "global";
 @import "extends";
-@import "common";
 
 /* Компоненты */
 @import "./components/modal";
@@ -16,6 +15,11 @@
 @import "./components/main-btn";
 @import "./components/model-card";
 @import "./components/request-form";
+@import "./components/swiper";
+@import "./components/review-slider";
+@import "./components/review-card";
+@import "./components/accordeon";
+
 /* Секции */
 
 @import "./components/header";

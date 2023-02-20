@@ -1,0 +1,9 @@
+mixin accordeon(data)
+  .accordeon
+    each item in data
+      .accordeon__item
+        .accordeon__item-header
+          .accordeon__item-icon(aria-hidden="true")
+          span!= item.title
+
+        .accordeon__item-content!= item.text

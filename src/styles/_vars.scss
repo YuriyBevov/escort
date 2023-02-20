@@ -6,10 +6,10 @@
     --font-family: "Inter", sans-serif;
     --secondary-font: 'GTEestiProDisplay';
     --content-width: 1360px;
-    --content-fluid-width: 1790px;
+    --content-fluid-width: 1920px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+    --container-fluid-width: var(--content-fluid-width);
 
     // colors
     /*--light-color: #fff;
@@ -32,4 +32,6 @@
     --main-bg-color: var(--dark);
 
     --main-transition: 0.3s 0.02s ease;
+    --slow-transition: 0.7s 0.02s ease;
+    --border-radius: 4px;
   }
