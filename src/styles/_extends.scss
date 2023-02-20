@@ -29,6 +29,20 @@
   border: 0;
 }
 
+.svg-icon {
+  svg {
+    fill: var(--info);
+    transition: fill var(--main-transition);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--accent);
+    }
+  }
+}
+
 /*text*/
 
 .main-title {
@@ -38,8 +52,6 @@
   line-height: 0.85;
   letter-spacing: -0.02em;
   margin-bottom: 30px;
-
-  max-width: 60%;
 }
 
 .undertext-btn {

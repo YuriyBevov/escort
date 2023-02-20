@@ -7,6 +7,10 @@
   background-size: cover;
   background-position: center;
 
+  &__title {
+    max-width: 840px;
+  }
+
   &__desc {
     margin-bottom: 75px;
     p {

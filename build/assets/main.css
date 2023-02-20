@@ -1341,6 +1341,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--white);
 }
 
 ul {
@@ -1362,7 +1363,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .header__badge, .review-slider-controls, .model-card__locked-icon, .model-card__top a, .main-btn, .nav__list-item a, .btn-outline, .iconed-btn {
+.flex-centered-content, .header__mobile-contacts button, .header__badge, .review-slider-controls, .model-card__locked-icon, .model-card__top a, .main-btn, .social a, .nav__list-item a, .btn-outline, .iconed-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1382,7 +1383,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
 }
 
-.flex-column, .quide__list-item, .review-card__header, .review-card, .request-form form fieldset, .model-card__locked-overlay, .model-card__info, .contact-phones a, .undertext-btn {
+.flex-column, .quide__list-item, .review-card__header, .review-card, .request-form form fieldset, .model-card__locked-overlay, .model-card__info, .contact-phones a, .burger, .undertext-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1399,6 +1400,16 @@ h1, h2, h3, h4, h5, h6, p {
   border: 0;
 }
 
+.svg-icon svg, .header__mobile-contacts button svg, .social a svg {
+  fill: var(--info);
+  -webkit-transition: fill var(--main-transition);
+  -o-transition: fill var(--main-transition);
+  transition: fill var(--main-transition);
+}
+.svg-icon:hover svg, .header__mobile-contacts button:hover svg, .social a:hover svg, .svg-icon:focus svg, .header__mobile-contacts button:focus svg, .social a:focus svg {
+  fill: var(--accent);
+}
+
 /*text*/
 .main-title {
   font-family: var(--secondary-font);
@@ -1407,7 +1418,6 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 0.85;
   letter-spacing: -0.02em;
   margin-bottom: 30px;
-  max-width: 60%;
 }
 
 .undertext-btn {
@@ -1595,7 +1605,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /*resets*/
-.button-default, .faq__footer button {
+.button-default, .faq__footer button, .header__mobile-contacts button {
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -1635,7 +1645,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 auto;
   max-width: var(--container-fluid-width);
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .container-fluid {
     padding: 0 var(--container-offset);
   }
@@ -1758,7 +1768,49 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 12px;
   color: var(--white);
 }
+@media (max-width: 535px) {
+  .logo img {
+    max-width: 135px;
+  }
+  .logo span {
+    font-size: 10px;
+  }
+}
 
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 961px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 420px) {
+  .burger {
+    margin-left: auto;
+  }
+}
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  margin: 4px 0;
+}
+.burger__line--middle {
+  width: 75%;
+}
 .nav__list-item {
   position: relative;
   min-height: 30px;
@@ -1858,17 +1910,21 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--accent);
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 .social a:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 10px;
 }
-.social a svg {
-  fill: var(--info);
-  -webkit-transition: fill var(--main-transition);
-  -o-transition: fill var(--main-transition);
-  transition: fill var(--main-transition);
-}
-.social a:hover svg, .social a:focus svg {
-  fill: var(--accent);
+@media (max-width: 961px) {
+  .social a svg {
+    fill: var(--white);
+  }
 }
 
 .main-btn {
@@ -1993,7 +2049,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   margin-bottom: 35px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2008,7 +2064,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-right: 20px;
   margin-right: 35px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form__header h2 {
     margin-right: 0;
     margin-bottom: 25px;
@@ -2020,7 +2076,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 6px;
   max-width: 560px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2034,7 +2090,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   max-width: 365px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form form fieldset {
     max-width: 100%;
     margin-right: 0;
@@ -2043,7 +2099,7 @@ h1, h2, h3, h4, h5, h6, p {
 .request-form form fieldset:last-of-type {
   margin-right: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form form fieldset:last-of-type {
     margin-right: 0;
   }
@@ -2082,7 +2138,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
   }*/
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form form fieldset input {
     padding: 15px;
   }
@@ -2111,7 +2167,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   max-width: 280px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .request-form form input[type=submit] {
     max-width: 100%;
   }
@@ -2315,8 +2371,26 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   padding: 35px 0 10px;
 }
+@media (max-width: 961px) {
+  .header {
+    padding: 10px 0;
+  }
+}
 .header__container {
   position: relative;
+  padding-top: 20px;
+}
+@media (max-width: 961px) {
+  .header__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 961px) {
+  .header__container {
+    padding-top: 10px;
+  }
 }
 .header__badge {
   position: absolute;
@@ -2328,8 +2402,27 @@ h1, h2, h3, h4, h5, h6, p {
   clip-path: polygon(0 0, 94% 0, 100% 100%, 6% 100%);
   background-color: var(--accent);
 }
+@media (max-width: 1361px) {
+  .header__badge {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 961px) {
+  .header__badge {
+    position: static;
+    top: initial;
+    left: initial;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    padding: 10px;
+  }
+}
 .header__badge svg {
-  fill: white;
+  fill: var(--white);
   margin-right: 5px;
 }
 .header__badge span {
@@ -2338,6 +2431,11 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--white);
+}
+@media (max-width: 961px) {
+  .header__badge span > span {
+    display: none;
+  }
 }
 .header__logo {
   margin-right: 5px;
@@ -2355,13 +2453,70 @@ h1, h2, h3, h4, h5, h6, p {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+@media (max-width: 1361px) {
+  .header__nav {
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
+  .header__nav .nav {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 961px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__contacts {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 1361px) {
+  .header__contacts {
+    display: none;
+  }
+}
+.header__mobile-contacts {
+  display: none;
+}
+.header__mobile-contacts button {
+  width: 30px;
+  height: 30px;
+  margin-right: 40px;
+}
+@media (max-width: 961px) {
+  .header__mobile-contacts button svg {
+    fill: var(--white);
+  }
+}
+@media (max-width: 1361px) {
+  .header__mobile-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 961px) {
+  .header__mobile-contacts {
+    margin-left: auto;
+  }
+}
+@media (max-width: 420px) {
+  .header__mobile-contacts {
+    display: none;
+  }
+}
 .header__social {
   margin-right: 20px;
+}
+@media (max-width: 648px) {
+  .header__social {
+    display: none;
+  }
 }
 .header__phones {
   margin-right: 20px;
@@ -2379,6 +2534,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.hero__title {
+  max-width: 840px;
 }
 .hero__desc {
   margin-bottom: 75px;

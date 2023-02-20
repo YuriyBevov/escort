@@ -3,12 +3,25 @@
   top: 0;
   left: 0;
   width: 100%;
-
   padding: 35px 0 10px;
+
+  @include m-b-tablet-lg-down {
+    padding: 10px 0;
+  }
 
   &__container {
     @extend .flex-wrap;
     position: relative;
+
+    padding-top: 20px;
+
+    @include m-b-tablet-lg-down {
+      align-items: center;
+    }
+
+    @include m-b-tablet-lg-down {
+      padding-top: 10px;
+    }
   }
 
   &__badge {
@@ -16,14 +29,27 @@
     top: -35px;
     left: 195px;
 
+    @include m-b-desktop-down {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     @extend .flex-centered-content;
     height: 35px;
     padding: 10px 25px;
     clip-path: polygon(0 0, 94% 0, 100% 100%, 6% 100%);
     background-color: var(--accent);
 
+    @include m-b-tablet-lg-down {
+      position: static;
+      top: initial;
+      left: initial;
+      transform: none;
+      padding: 10px;
+    }
+
     svg {
-      fill: white;
+      fill:var(--white);
       margin-right: 5px;
     }
 
@@ -33,6 +59,12 @@
       font-weight: bold;
       text-transform: uppercase;
       color: var(--white);
+
+      @include m-b-tablet-lg-down {
+        & > span {
+          display: none;
+        }
+      }
     }
   }
 
@@ -47,15 +79,69 @@
     margin-right: 15px;
     margin-bottom: 20px;
     flex-grow: 1;
+
+    @include m-b-desktop-down {
+      margin-bottom: 0;
+      margin-left: 15px;
+
+      .nav {
+        margin: 0 auto;
+      }
+    }
+
+    @include m-b-tablet-lg-down {
+      display: none;
+    }
   }
 
   &__contacts {
     @extend .flex-wrap;
     align-items: center;
+
+    @include m-b-desktop-down {
+      display: none;
+    }
+  }
+
+  &__mobile-contacts {
+    display: none;
+
+    button {
+      @extend .button-default;
+      @extend .flex-centered-content;
+      width: 30px;
+      height: 30px;
+
+      margin-right: 40px;
+      @extend .svg-icon;
+
+      @include m-b-tablet-lg-down {
+        svg {
+          fill: var(--white);
+        }
+      }
+    }
+
+    @include m-b-desktop-down {
+      display: flex;
+      align-items: center;
+    }
+
+    @include m-b-tablet-lg-down {
+      margin-left: auto;
+    }
+
+    @include m-b-down(420px) {
+      display: none;
+    }
   }
 
   &__social {
     margin-right: 20px;
+
+    @include m-b-down(648px) {
+      display: none;
+    }
   }
 
   &__phones {
