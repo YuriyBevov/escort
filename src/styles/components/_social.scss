@@ -11,7 +11,7 @@
 
     @extend .svg-icon;
 
-    @include m-b-tablet-lg-down {
+    @include m-b-desktop-down {
       svg {
         fill: var(--white);
       }

@@ -5,7 +5,7 @@
   width: 100%;
   padding: 35px 0 10px;
 
-  @include m-b-tablet-lg-down {
+  @include m-b-desktop-down {
     padding: 10px 0;
   }
 
@@ -15,11 +15,8 @@
 
     padding-top: 20px;
 
-    @include m-b-tablet-lg-down {
+    @include m-b-desktop-down {
       align-items: center;
-    }
-
-    @include m-b-tablet-lg-down {
       padding-top: 10px;
     }
   }
@@ -29,32 +26,35 @@
     top: -35px;
     left: 195px;
 
-    @include m-b-desktop-down {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
     @extend .flex-centered-content;
     height: 35px;
     padding: 10px 25px;
     clip-path: polygon(0 0, 94% 0, 100% 100%, 6% 100%);
     background-color: var(--accent);
 
-    @include m-b-tablet-lg-down {
+    @include m-b-desktop-down {
       position: static;
       top: initial;
       left: initial;
       transform: none;
       padding: 10px;
+      background-color: transparent;
+
+      padding: 5px 10px;
+      height: 30px;
     }
 
-    @include m-b-down(400px) {
+    @include m-b-down(367px) {
       display: none;
     }
 
     svg {
       fill:var(--white);
       margin-right: 5px;
+
+      @include m-b-desktop-down {
+        display: none;
+      }
     }
 
     span {
@@ -64,10 +64,20 @@
       text-transform: uppercase;
       color: var(--white);
 
-      @include m-b-tablet-lg-down {
+      @include m-b-desktop-down {
+        font-size: 18px;
+        color: transparent;
+        background-clip: text;
+        background-image: url(../assets/img/text-underlay.jpg);
+        background-position: center;
+
         & > span {
           display: none;
         }
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
       }
     }
   }
@@ -75,6 +85,19 @@
   &__logo {
     margin-right: 5px;
     justify-content: flex-end;
+
+    @include m-b-down(421px) {
+      img {
+        width: 120px;
+        height: 30px;
+        margin: 0;
+        object-fit: contain;
+      }
+
+      span {
+        display: none;
+      }
+    }
   }
 
   &__nav {
@@ -93,7 +116,7 @@
       }
     }
 
-    @include m-b-tablet-lg-down {
+    @include m-b-laptop-down {
       display: none;
     }
   }
@@ -119,10 +142,14 @@
       margin-right: 40px;
       @extend .svg-icon;
 
-      @include m-b-tablet-lg-down {
+      @include m-b-desktop-down {
         svg {
           fill: var(--white);
         }
+      }
+
+      @include m-b-down(421px) {
+        margin-right: 25px;
       }
     }
 
@@ -131,17 +158,21 @@
       align-items: center;
     }
 
-    @include m-b-tablet-lg-down {
+    @include m-b-laptop-down {
       margin-left: auto;
     }
 
-    @include m-b-down(400px) {
+    /*@include m-b-down(375px) {
       display: none;
-    }
+    }*/
   }
 
   &__social {
     margin-right: 20px;
+
+    @include m-b-laptop-down {
+      margin-right: 40px;
+    }
 
     @include m-b-down(648px) {
       display: none;
