@@ -15,7 +15,7 @@
     display: flex;
   }
 
-  @include m-b-down(420px) {
+  @include m-b-down(400px) {
     margin-left: auto;
   }
 

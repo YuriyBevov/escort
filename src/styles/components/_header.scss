@@ -48,7 +48,7 @@
       padding: 10px;
     }
 
-    @include m-b-down(420px) {
+    @include m-b-down(400px) {
       display: none;
     }
 
@@ -133,6 +133,10 @@
 
     @include m-b-tablet-lg-down {
       margin-left: auto;
+    }
+
+    @include m-b-down(400px) {
+      display: none;
     }
   }
 

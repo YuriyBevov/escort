@@ -1797,7 +1797,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   .burger {
     margin-left: auto;
   }
@@ -2421,7 +2421,7 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 10px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   .header__badge {
     display: none;
   }
@@ -2508,6 +2508,11 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 961px) {
   .header__mobile-contacts {
     margin-left: auto;
+  }
+}
+@media (max-width: 400px) {
+  .header__mobile-contacts {
+    display: none;
   }
 }
 .header__social {
