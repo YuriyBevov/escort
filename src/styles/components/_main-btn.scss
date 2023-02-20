@@ -11,7 +11,7 @@
 
   width: fit-content;
   height: fit-content;
-  min-height: 40px;
+  min-height: 70px;
 
   padding: 24px 20px;
   border: 1px solid var(--accent);
@@ -21,7 +21,7 @@
   background-color: var(--accent);
 
   cursor: pointer;
-  transition: all var(--main-transition);
+  transition: color var(--main-transition), background-color var(--main-transition), border-color var(--main-transition);
 
   &:hover,
   &:focus {

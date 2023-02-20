@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(1fr, 480px));
     grid-template-rows: auto;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
 
   &__side {
@@ -82,6 +82,14 @@
           font-size: 14px;
           font-weight: 600;
           color: var(--white);
+          transition: color var(--main-transition);
+        }
+
+        &:hover,
+        &:focus {
+          span {
+            color: var(--accent);
+          }
         }
       }
 
@@ -101,12 +109,20 @@
 
   &__contacts {
     @extend .flex-wrap;
-    padding-top: 15px;
+    padding-top: 25px;
   }
 
   &__phones {
-    .contact-phones a:not(:last-child){
-      margin-right: 50px;
+    flex-grow: 1;
+
+    .contact-phones {
+      justify-content: space-between;
+      margin-right: 20px;
+      max-width: 350px;
+
+      a:not(:last-child){
+        margin-right: 20px;
+      }
     }
   }
 

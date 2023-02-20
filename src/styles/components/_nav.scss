@@ -1,5 +1,5 @@
 .nav {
-  //margin: 0 auto;
+
   &__list {
     @extend .flex-wrap;
   }
@@ -21,7 +21,7 @@
 
       font-size: 14px;
 
-      padding: 5px 10px;
+      padding: 5px 8px;
       color: var(--white);
 
       transition: color var(--main-transition);

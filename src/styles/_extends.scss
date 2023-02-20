@@ -93,7 +93,7 @@
   max-width: 280px;
   border: 1px solid var(--info);
 
-  padding: 14px 20px;
+  padding: 10px 20px;
 
   transition: background-color var(--main-transition);
 
@@ -159,6 +159,23 @@
   font-size: 44px;
   line-height: 35px;
   font-weight: 300;
+}
+
+.check-title {
+  position: relative;
+  padding-left: 60px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/check-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .section-text {
@@ -244,7 +261,7 @@
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #ffffff;
+  background-color: var(--input-bg);
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,

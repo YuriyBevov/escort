@@ -1,0 +1,18 @@
+mixin request-form-section(text, button)
+
+  .request-form
+    .request-form__header
+      h2.title-md.clipped-title.check-title Оставить <br/>заявку
+      p!= text
+
+    form(method="post").ajax_form
+      fieldset
+        input(type="text" placeholder="Ваше имя" name="name" value="" required="" autocomplete="off")
+        span Как к вам можно обращаться?
+
+      fieldset
+        input(type="tel" placeholder="Телефон" name="phone" value="" required="" autocomplete="off")
+        span Номер телефона ни&nbsp;при&nbsp;каких условиях не&nbsp;передается третьим&nbsp;лицам
+
+      input(type="submit" value= button).main-btn
+      input(type="hidden" name="af_action" value="ee4a31089d7c0d2c9cc786dbb82a31a5")
