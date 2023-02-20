@@ -48,6 +48,10 @@
       padding: 10px;
     }
 
+    @include m-b-down(420px) {
+      display: none;
+    }
+
     svg {
       fill:var(--white);
       margin-right: 5px;
@@ -129,10 +133,6 @@
 
     @include m-b-tablet-lg-down {
       margin-left: auto;
-    }
-
-    @include m-b-down(420px) {
-      display: none;
     }
   }
 

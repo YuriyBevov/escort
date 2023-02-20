@@ -2421,6 +2421,11 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 10px;
   }
 }
+@media (max-width: 420px) {
+  .header__badge {
+    display: none;
+  }
+}
 .header__badge svg {
   fill: var(--white);
   margin-right: 5px;
@@ -2503,11 +2508,6 @@ h1, h2, h3, h4, h5, h6, p {
 @media (max-width: 961px) {
   .header__mobile-contacts {
     margin-left: auto;
-  }
-}
-@media (max-width: 420px) {
-  .header__mobile-contacts {
-    display: none;
   }
 }
 .header__social {
