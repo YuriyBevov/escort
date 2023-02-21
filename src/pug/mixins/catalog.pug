@@ -1,7 +1,10 @@
 mixin catalog(data)
   section.catalog
     .container
-      h2.clipped-title(class= data.titleClass)!= data.title
+      if data.isInner
+        h1.clipped-title.section-title(class= data.titleClass)!= data.title
+      else
+        h2.clipped-title.section-title(class= data.titleClass)!= data.title
 
       ul.catalog__list
         each val in [1, 2, 3, 4]

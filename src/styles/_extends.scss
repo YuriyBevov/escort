@@ -204,9 +204,13 @@
   line-height: .8;
   font-weight: 300;
 
+  @include m-b-laptop-down {
+    font-size: 64px;
+    line-height: 1;
+  }
+
   @include m-b-tablet-down {
     font-size: 44px;
-    line-height: 1;
   }
 
   @include m-b-mobile-lg-down {
@@ -287,8 +291,10 @@
       height: 30px;
     }
   }
+}
 
-
+.section-title {
+  margin-bottom: 30px;
 }
 
 .clipped-title {

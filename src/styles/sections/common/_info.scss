@@ -1,0 +1,128 @@
+.info {
+  &__grid {
+    display: grid;
+
+    grid-column-gap: 100px;
+    grid-row-gap: 30px;
+    margin-bottom: 50px;
+
+    @include m-b-desktop-down {
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+
+    &--top {
+      grid-template-columns: auto 350px;
+
+      @include m-b-laptop-down {
+        grid-template-columns: auto 310px;
+      }
+    }
+
+    &--bottom {
+      grid-template-columns: auto 430px;
+
+      @include m-b-mobile-lg-down {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include m-b-tablet-lg-down {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  p,
+  h3,
+  li {
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: var(--white);
+    max-width: 710px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--light);
+    max-width: 650px;
+    margin-bottom: 25px;
+  }
+
+  ul {
+    li {
+      position: relative;
+      font-size: 16px;
+      color: var(--light);
+      max-width: 710px;
+      margin-bottom: 27px;
+      padding-left: 75px;
+
+      @include m-b-tablet-down {
+        padding-left: 40px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding-left: 15px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        content: "";
+        width: 4px;
+        height: 4px;
+        background-color: var(--light);
+        border-radius: 50%;
+
+        @include m-b-tablet-down {
+          left: 25px;
+        }
+
+        @include m-b-mobile-lg-down {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    max-width: 430px;
+
+    @include m-b-tablet-lg-down {
+      padding-left: 40px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 100px;
+      left: -50px;
+      content: '';
+      width: 96px;
+      height: 96px;
+      background-image: url("../assets/img/logo-rounded.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include m-b-tablet-lg-down {
+        left: -10px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 720px;
+      object-fit: contain;
+    }
+  }
+}
