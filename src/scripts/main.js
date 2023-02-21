@@ -1,4 +1,6 @@
+import './modules/burger';
+import './modules/nav';
 import './modules/imask';
 import './modules/swiper';
 import './modules/accordeon';
-import './modules/faq-text-toggler';
+import './modules/faqTextToggler';

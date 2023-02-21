@@ -22,10 +22,50 @@ if (accordeon) {
 
 /***/ }),
 
-/***/ "./src/scripts/modules/faq-text-toggler.js":
-/*!*************************************************!*\
-  !*** ./src/scripts/modules/faq-text-toggler.js ***!
-  \*************************************************/
+/***/ "./src/scripts/modules/burger.js":
+/*!***************************************!*\
+  !*** ./src/scripts/modules/burger.js ***!
+  \***************************************/
+/***/ (() => {
+
+var burger = document.querySelector('.burger');
+
+if (burger) {
+  var header = document.querySelector('header');
+
+  var onClickToggleNav = function onClickToggleNav() {
+    header.classList.toggle('header--mobile-opened');
+
+    if (header.classList.contains('header--mobile-opened')) {
+      document.addEventListener('click', onOverlayClickCloseNav);
+      document.addEventListener('keydown', onEscClickCloseNav);
+    } else {
+      document.removeEventListener('click', onOverlayClickCloseNav);
+      document.removeEventListener('keydown', onEscClickCloseNav);
+    }
+  };
+
+  var onEscClickCloseNav = function onEscClickCloseNav(evt) {
+    if (evt.key === 'Esc' || evt.key === 'Escape') {
+      onClickToggleNav();
+    }
+  };
+
+  var onOverlayClickCloseNav = function onOverlayClickCloseNav(evt) {
+    if (!header.contains(evt.target)) {
+      onClickToggleNav();
+    }
+  };
+
+  burger.addEventListener('click', onClickToggleNav);
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/faqTextToggler.js":
+/*!***********************************************!*\
+  !*** ./src/scripts/modules/faqTextToggler.js ***!
+  \***********************************************/
 /***/ (() => {
 
 var btn = document.querySelector('.faq__more');
@@ -63,6 +103,72 @@ if (items) {
   };
   items.forEach(function (item) {
     (0,imask__WEBPACK_IMPORTED_MODULE_0__["default"])(item, options);
+  });
+}
+
+;
+
+/***/ }),
+
+/***/ "./src/scripts/modules/nav.js":
+/*!************************************!*\
+  !*** ./src/scripts/modules/nav.js ***!
+  \************************************/
+/***/ (() => {
+
+var nav = document.querySelector('header nav');
+
+if (nav) {
+  var windowWidth = window.innerWidth;
+  window.addEventListener('resize', function () {
+    windowWidth = window.innerWidth;
+  });
+  var triggers = nav.querySelectorAll('.nav__list-item--nested a');
+  var inner = null;
+  var button = null;
+
+  var onOverlayClickCloseInner = function onOverlayClickCloseInner(evt) {
+    evt.stopPropagation();
+
+    if (windowWidth > 1023) {
+      if (!inner.contains(evt.target)) {
+        closeInner();
+      }
+
+      ;
+    }
+
+    ;
+  };
+
+  var onButtonClickCloseInner = function onButtonClickCloseInner() {
+    closeInner();
+  };
+
+  var closeInner = function closeInner() {
+    document.removeEventListener('click', onOverlayClickCloseInner);
+    button.removeEventListener('click', onButtonClickCloseInner);
+    button.classList.remove('active');
+    inner.classList.remove('active');
+    inner = null;
+    button = null;
+  };
+
+  function openSubMenu() {
+    inner.classList.add('active');
+    button.classList.add('active');
+    document.addEventListener('click', onOverlayClickCloseInner);
+    button.addEventListener('click', onButtonClickCloseInner);
+  }
+
+  ;
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      inner = trigger.nextElementSibling;
+      button = trigger;
+      openSubMenu();
+    });
   });
 }
 
@@ -15971,12 +16077,18 @@ var __webpack_exports__ = {};
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/imask */ "./src/scripts/modules/imask.js");
-/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/swiper */ "./src/scripts/modules/swiper.js");
-/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordeon */ "./src/scripts/modules/accordeon.js");
-/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_accordeon__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_faq_text_toggler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/faq-text-toggler */ "./src/scripts/modules/faq-text-toggler.js");
-/* harmony import */ var _modules_faq_text_toggler__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_faq_text_toggler__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger */ "./src/scripts/modules/burger.js");
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_burger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/nav */ "./src/scripts/modules/nav.js");
+/* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_nav__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_imask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/imask */ "./src/scripts/modules/imask.js");
+/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/swiper */ "./src/scripts/modules/swiper.js");
+/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordeon */ "./src/scripts/modules/accordeon.js");
+/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordeon__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/faqTextToggler */ "./src/scripts/modules/faqTextToggler.js");
+/* harmony import */ var _modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5__);
+
+
 
 
 

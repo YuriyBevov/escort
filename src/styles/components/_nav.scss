@@ -40,17 +40,14 @@
 
         svg {
           fill:var(--accent);
-          transform: rotate(180deg);
         }
       }
-    }
 
-    &--nested {
-      &:hover,
-      &:focus {
-        .nav__list-item-inner {
-          opacity: 1; // temp?
-          visibility: visible; // temp?
+      &.active {
+        color: var(--accent);
+        svg {
+          fill:var(--accent);
+          transform: rotate(180deg);
         }
       }
     }
@@ -63,8 +60,24 @@
       width: 250px;
       transition: all var(--main-transition);
 
-      opacity: 0; // temp?
-      visibility: hidden; // temp?
+      opacity: 0;
+      visibility: hidden;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      z-index: 99;
+    }
+
+    &--nested {
+      a.active {
+        svg {
+          fill:var(--accent);
+          transform: rotate(180deg);
+        }
+      }
     }
 
     ul {

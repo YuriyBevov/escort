@@ -189,12 +189,28 @@
 .title-md {
   font-family: var(--secondary-font);
   font-size: 44px;
-  line-height: 35px;
+  line-height: .8;
   font-weight: 300;
 
   @include m-b-mobile-lg-down {
     font-size: 32px;
     line-height: 1;
+  }
+}
+
+.title-lg {
+  font-family: var(--secondary-font);
+  font-size: 80px;
+  line-height: .8;
+  font-weight: 300;
+
+  @include m-b-tablet-down {
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  @include m-b-mobile-lg-down {
+    font-size: 36px;
   }
 }
 

@@ -1,0 +1,40 @@
+mixin catalog(data)
+  section.catalog
+    .container
+      h2.clipped-title(class= data.titleClass)!= data.title
+
+      ul.catalog__list
+        each val in [1, 2, 3, 4]
+          li.catalog__list-item
+            .model-card
+              .model-card__top
+                a(href="#")
+                  img(src="./assets/img/genya-model.jpg" alt="" width="420" height="510")
+              .model-card__bottom
+                a(href="katalog/genya/").model-card__name Женя
+
+                .model-card__info
+                  span Возраст 19 лет
+                  span Рост 169 см
+                  span Параметры 91/62/93
+                  span Грудь 2 размер
+                  span Вес 52 кг
+                  span Цвет волос каштановый
+
+                a(href="katalog/genya/").model-card__more подробнее
+
+        each val in [1, 2, 3, 4]
+          li.catalog__list-item
+            .model-card.model-card--locked
+              .model-card__top
+                a(href="#")
+                  img(src="./assets/img/model-locked.png" alt="" width="420" height="510")
+
+              .model-card__locked-overlay
+                a(href="#" aria-label="получить доступ").model-card__locked-icon
+                  svg(width="27" height="35")
+                    use(xlink:href="./assets/sprite.svg#icon-lock")
+
+                h3 доступно <br>в vip галерее
+
+                a(href="#").btn-outline получить доступ

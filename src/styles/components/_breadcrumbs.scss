@@ -1,0 +1,36 @@
+.breadcrumbs {
+  margin-bottom: 45px;
+
+  ul {
+    display: flex;
+    li {
+      position: relative;
+      padding-right: 20px;
+
+      a,
+      span {
+        display: flex;
+        font-family: var(--secondary-font);
+        font-size: 12px;
+        white-space: nowrap;
+        color: var(--white);
+      }
+
+      &:not(:last-child)::after {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: var(--info);
+        content: '';
+      }
+
+      span {
+        color: var(--info);
+      }
+    }
+  }
+}
