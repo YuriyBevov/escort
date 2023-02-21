@@ -161,10 +161,6 @@
     @include m-b-laptop-down {
       margin-left: auto;
     }
-
-    /*@include m-b-down(375px) {
-      display: none;
-    }*/
   }
 
   &__social {
