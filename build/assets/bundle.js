@@ -110,6 +110,40 @@ if (items) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/mapSwitcher.js":
+/*!********************************************!*\
+  !*** ./src/scripts/modules/mapSwitcher.js ***!
+  \********************************************/
+/***/ (() => {
+
+var switchers = document.querySelectorAll('.map-switcher');
+
+if (switchers) {
+  var maps = document.querySelectorAll('.map__content iframe');
+
+  function setActiveMap(current, index) {
+    switchers.forEach(function (switcher) {
+      switcher.classList.contains('active') ? switcher.classList.remove('active') : null;
+    });
+    maps.forEach(function (map) {
+      map.classList.contains('active') ? map.classList.remove('active') : null;
+    });
+    current.classList.add('active');
+    maps[index].classList.add('active');
+  }
+
+  ;
+  switchers.forEach(function (switcher, index) {
+    switcher.addEventListener('click', function (evt) {
+      setActiveMap(switcher, index);
+    });
+  });
+}
+
+;
+
+/***/ }),
+
 /***/ "./src/scripts/modules/nav.js":
 /*!************************************!*\
   !*** ./src/scripts/modules/nav.js ***!
@@ -16087,6 +16121,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordeon__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/faqTextToggler */ "./src/scripts/modules/faqTextToggler.js");
 /* harmony import */ var _modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/mapSwitcher */ "./src/scripts/modules/mapSwitcher.js");
+/* harmony import */ var _modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 

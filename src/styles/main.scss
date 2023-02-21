@@ -21,7 +21,10 @@
 @import "./components/review-slider";
 @import "./components/review-card";
 @import "./components/accordeon";
-@import "./components/contacts";
+@import "./components/info-contacts";
+@import "./components/contact-note";
+@import "./components/image-insert";
+@import "./components/map";
 
 /* Секции */
 
@@ -38,6 +41,7 @@
 @import "./sections/index-page/faq";
 
 @import "./sections/common/info";
+@import "./sections/contacts-page/contacts";
 
 @import "./components/footer";
 

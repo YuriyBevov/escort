@@ -1,0 +1,22 @@
+ .contact-note {
+  display: flex;
+
+  & > &__text {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: var(--accent);
+    max-width: 650px;
+    margin-bottom: 25px;
+    padding-right: 12px;
+
+    @include m-b-down(421px) {
+      font-size: 14px;
+    }
+  }
+
+  & > svg {
+    margin-top: -8px;
+    fill: var(--accent);
+  }
+}

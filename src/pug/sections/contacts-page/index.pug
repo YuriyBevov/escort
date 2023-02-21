@@ -1,0 +1,37 @@
+section.contacts
+  .container
+    h1.section-title.title-lg.clipped-title Наши контакты
+
+    .contacts__grid.contacts__grid--top
+      .contacts__grid-side.contacts__grid-side--info
+
+        .contacts-field
+          .contacts-field-header
+            a(href="tel:+74952298002") 8 (495) 229-80-02
+            include ../../components/social
+          address 123317, г. Москва, Пресненская наб., д. 12, ММДЦ "Москва Сити",Башня Федерация "Запад".
+
+        .contacts-field
+          .contacts-field-header
+            a(href="tel:88003507789") 8 (800) 350-77-89
+            include ../../components/social
+          address 101024, г. Санкт-Петербург, Невский проспект, 152
+
+      .contacts__grid-side.contacts__grid-side--mail
+        include ../../components/contact-note
+
+        a(href="mailto:office@escort-mg.com").contacts__mail
+          svg(width="18" height="18")
+            use(xlink:href="./assets/sprite.svg#icon-mail")
+          span office@escort-mg.com
+
+    .contacts__grid.contacts__grid--bottom
+      .contacts__grid-side
+        include ../../components/map
+
+      .contacts__grid-side.contacts__grid-side--image
+        .contacts__image.image-insert
+          img(src="./assets/img/girls.jpg" alt="Элитные спутницы для путешествий в компании солидных людей")
+
+
+
