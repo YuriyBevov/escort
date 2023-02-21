@@ -1,6 +1,10 @@
 .feature {
   margin-top: -145px;
 
+  @include m-b-tablet-lg-down {
+    margin-top: 0;
+  }
+
   &__container {
     max-width: 1440px;
     padding: 45px 60px;
@@ -10,6 +14,20 @@
     background-size: contain;
     background-position: right;
     border-radius: 4px;
+
+    @include m-b-desktop-down {
+      padding: 45px 30px;
+    }
+
+    @include m-b-tablet-lg-down {
+      padding: 45px 15px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @include m-b-down(1441px) {
+      border-radius: 0;
+    }
   }
 
   &__list {
@@ -17,6 +35,11 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: 20px;
+
+    @include m-b-tablet-lg-down {
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+    }
   }
 
   &__list-item {
@@ -27,6 +50,12 @@
       fill: var(--accent);
       margin-right: 20px;
       min-width: 75px;
+
+      @include m-b-mobile-lg-down {
+        min-width: 65px;
+        width: 65px;
+        height: 65px;
+      }
     }
 
     &-icon {
@@ -40,6 +69,11 @@
       text-transform: uppercase;
       margin-right: 20px;
       color: var(--accent);
+
+      @include m-b-mobile-lg-down {
+        max-width: 115px;
+        font-size: 38px;
+      }
     }
   }
 }

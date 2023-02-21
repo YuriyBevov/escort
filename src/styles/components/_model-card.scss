@@ -13,6 +13,14 @@
 
   &__bottom {
     padding: 25px 40px;
+
+    @include m-b-tablet-lg-down {
+      padding: 25px;
+    }
+
+    @include m-b-down(635px) {
+      padding: 20px;
+    }
   }
 
   &__name {

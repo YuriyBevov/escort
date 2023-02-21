@@ -1,5 +1,10 @@
 .catalog {
   padding-bottom: 100px;
+
+  @include m-b-laptop-down {
+    padding-bottom: 40px;
+  }
+
   h2 {
     margin-bottom: 30px;
   }
@@ -10,5 +15,18 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     margin-bottom: 60px;
+
+    @include m-b-down(850px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m-b-down(635px) {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+
+    @include m-b-down(481px) {
+      grid-template-columns: 1fr;
+    }
   }
 }

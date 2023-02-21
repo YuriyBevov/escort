@@ -1,4 +1,5 @@
 $side-offset-desktop: 45px;
+$side-offset-mobile: 25px;
 
 .review-card {
   position: relative;
@@ -7,6 +8,10 @@ $side-offset-desktop: 45px;
     position: absolute;
     top: -25px;
     left: $side-offset-desktop;
+
+    @include m-b-down(421px) {
+      left: $side-offset-mobile;
+    }
 
     content: '';
 
@@ -23,6 +28,10 @@ $side-offset-desktop: 45px;
   width: 100%;
   height: 360px;
   padding: 30px $side-offset-desktop;
+
+  @include m-b-down(421px) {
+    padding: $side-offset-mobile;
+  }
 
   background: rgba(38, 36, 41, 0.5);
 

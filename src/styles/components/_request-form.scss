@@ -12,9 +12,14 @@
       padding-right: 20px;
 
       margin-right: 35px;
+
       @include m-b-tablet-down {
         margin-right: 0;
         margin-bottom: 25px;
+      }
+
+      @include m-b-mobile-lg-down {
+        margin-bottom: 10px;
       }
     }
 
