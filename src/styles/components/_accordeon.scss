@@ -77,5 +77,10 @@
     color: var(--light);
 
     transition: all var(--main-transition);
+
+    ol {
+      padding-left: 25px;
+      font-size: 14px;
+    }
   }
 }

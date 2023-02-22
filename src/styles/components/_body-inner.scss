@@ -1,0 +1,15 @@
+.body-inner {
+  .header {
+    position: static;
+    top: initial;
+    left: initial;
+
+    margin-bottom: 30px;
+  }
+
+  &--bg {
+    background-image: url("../assets/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}

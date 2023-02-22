@@ -7,6 +7,7 @@
 @import "extends";
 
 /* Компоненты */
+@import "./components/body-inner";
 @import "./components/breadcrumbs";
 @import "./components/modal";
 @import "./components/logo";
@@ -23,7 +24,7 @@
 @import "./components/accordeon";
 @import "./components/info-contacts";
 @import "./components/contact-note";
-@import "./components/image-insert";
+@import "./components/marked-image-block";
 @import "./components/map";
 
 /* Секции */
@@ -40,7 +41,7 @@
 @import "./sections/index-page/review";
 @import "./sections/index-page/faq";
 
-@import "./sections/common/info";
+@import "./sections/common/cmn";
 @import "./sections/contacts-page/contacts";
 
 @import "./components/footer";

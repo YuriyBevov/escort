@@ -5,14 +5,16 @@
     margin-bottom: 40px;
   }
 
-  &__container {
-    position: relative;
-    padding-bottom: 50px;
+  &:not(&--main) {
+    .faq__container {
+      position: relative;
+      padding-bottom: 50px;
 
-    &::after {
-      @extend .section-line;
-      top: 100%;
-      right: 0;
+      &::after {
+        @extend .section-line;
+        top: 100%;
+        right: 0;
+      }
     }
   }
 
