@@ -71,7 +71,7 @@ if (burger) {
 var opener = document.querySelector('.header__contacts-mobile-opener');
 
 if (opener) {
-  var modal = document.querySelector('.header__contacts');
+  var contactModal = document.querySelector('.header__contacts');
   var closer = document.querySelector('.header__contacts-mobile-closer');
 
   var removeListeners = function removeListeners() {
@@ -90,16 +90,16 @@ if (opener) {
 
   var closeContacts = function closeContacts() {
     removeListeners();
-    modal.classList.remove('active');
+    contactModal.classList.remove('active');
   };
 
   var onClickOpenContacts = function onClickOpenContacts() {
-    modal.classList.add('active');
+    contactModal.classList.add('active');
     addListeners();
   };
 
   var onOverlayClickCloseContacts = function onOverlayClickCloseContacts(evt) {
-    if (!modal.contains(evt.target)) {
+    if (!contactModal.contains(evt.target)) {
       closeContacts();
     }
   };
@@ -256,6 +256,7 @@ if (nav) {
   triggers.forEach(function (trigger) {
     trigger.addEventListener('click', function (evt) {
       evt.stopPropagation();
+      evt.preventDefault();
       inner = trigger.nextElementSibling;
       button = trigger;
       openSubMenu();

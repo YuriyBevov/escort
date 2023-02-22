@@ -44,6 +44,7 @@ if(nav) {
   triggers.forEach(trigger => {
     trigger.addEventListener('click', (evt) => {
       evt.stopPropagation();
+      evt.preventDefault();
 
       inner = trigger.nextElementSibling;
       button = trigger;

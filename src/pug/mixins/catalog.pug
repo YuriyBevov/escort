@@ -64,6 +64,24 @@ mixin catalog(data)
 
                   a(href="catalog-element.html").model-card__more подробнее
 
+          li.catalog__list-item
+            .model-card
+              .model-card__top
+                a(href="#")
+                  img(src="./assets/img/slide_1.jpg" alt="" width="420" height="510")
+              .model-card__bottom
+                a(href="catalog-element.html").model-card__name Женя
+
+                .model-card__info
+                  span Возраст 19 лет
+                  span Рост 169 см
+                  span Параметры 91/62/93
+                  span Грудь 2 размер
+                  span Вес 52 кг
+                  span Цвет волос каштановый
+
+                a(href="catalog-element.html").model-card__more подробнее
+
           each val in [1, 2, 3, 4]
             li.catalog__list-item
               .model-card.model-card--locked

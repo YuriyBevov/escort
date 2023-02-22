@@ -1,8 +1,7 @@
 const opener = document.querySelector('.header__contacts-mobile-opener');
 
 if(opener) {
-  const modal = document.querySelector('.header__contacts');
-
+  const contactModal = document.querySelector('.header__contacts');
   const closer = document.querySelector('.header__contacts-mobile-closer');
 
   const removeListeners = () => {
@@ -23,17 +22,16 @@ if(opener) {
 
   const closeContacts = () => {
     removeListeners();
-    modal.classList.remove('active');
-
+    contactModal.classList.remove('active');
   }
 
   const onClickOpenContacts = () => {
-    modal.classList.add('active');
+    contactModal.classList.add('active');
     addListeners();
   }
 
   const onOverlayClickCloseContacts = (evt) => {
-    if(!modal.contains(evt.target)) {
+    if(!contactModal.contains(evt.target)) {
       closeContacts();
     }
   }
