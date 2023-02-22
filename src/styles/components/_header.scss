@@ -122,18 +122,11 @@
   }
 
   &__contacts {
-    @extend .flex-wrap;
-    align-items: center;
+    position: relative;
 
-    @include m-b-desktop-down {
+    &-mobile-opener {
       display: none;
-    }
-  }
 
-  &__mobile-contacts {
-    display: none;
-
-    button {
       @extend .button-default;
       @extend .flex-centered-content;
       width: 30px;
@@ -151,15 +144,99 @@
       @include m-b-down(421px) {
         margin-right: 25px;
       }
+
+      @include m-b-desktop-down {
+        display: flex;
+      }
     }
 
-    @include m-b-desktop-down {
-      display: flex;
+    &-mobile-closer {
+      display: none;
+
+      @extend .flex-centered-content;
+      @extend .button-default;
+
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    &-container {
+      @extend .flex-wrap;
       align-items: center;
+
+      @include m-b-desktop-down {
+        display: none;
+      }
     }
 
     @include m-b-laptop-down {
       margin-left: auto;
+    }
+
+    @include m-b-desktop-down {
+      &.active {
+
+        .header__contacts-mobile-closer {
+          display: flex;
+        }
+
+        .header__contacts-container {
+          display: flex;
+          position: absolute;
+          top: calc(100% + 25px);
+          right: 0;
+          width: 220px;
+          padding: 20px;
+          background-color: rgba(61, 58, 65, 0.9);
+          border-radius: var(--border-radius);
+          z-index: 99;
+
+          &::before {
+            position: absolute;
+            top: -12px;
+            right: 45px;
+            content: " ";
+            border: 12px solid transparent;
+            border-left: 12px solid rgba(61, 58, 65, 0.9);
+            border-top: 12px solid rgba(61, 58, 65, 0.9);
+            transform: rotate(45deg);
+          }
+
+          .header__phones {
+            margin-right: 0;
+
+            a {
+              margin-bottom: 20px;
+            }
+          }
+
+          .header__social {
+            display: none;
+            margin-bottom: 20px;
+
+            @include m-b-down(648px) {
+              display: flex;
+            }
+          }
+
+          .header__callback {
+            min-height: 40px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  &__mobile-contacts {
+    display: none;
+
+    @include m-b-desktop-down {
+      display: flex;
+      align-items: center;
     }
   }
 

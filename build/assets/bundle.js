@@ -62,6 +62,63 @@ if (burger) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/contactOpener.js":
+/*!**********************************************!*\
+  !*** ./src/scripts/modules/contactOpener.js ***!
+  \**********************************************/
+/***/ (() => {
+
+var opener = document.querySelector('.header__contacts-mobile-opener');
+
+if (opener) {
+  var modal = document.querySelector('.header__contacts');
+  var closer = document.querySelector('.header__contacts-mobile-closer');
+
+  var removeListeners = function removeListeners() {
+    document.removeEventListener('click', onOverlayClickCloseContacts);
+    document.removeEventListener('keydown', onEscClickCloseContacts);
+    closer.removeEventListener('click', onEscClickCloseContacts);
+    opener.addEventListener('click', onClickOpenContacts);
+  };
+
+  var addListeners = function addListeners() {
+    document.addEventListener('click', onOverlayClickCloseContacts);
+    document.addEventListener('keydown', onEscClickCloseContacts);
+    closer.addEventListener('click', onCloserClickCloseContacts);
+    opener.removeEventListener('click', onClickOpenContacts);
+  };
+
+  var closeContacts = function closeContacts() {
+    removeListeners();
+    modal.classList.remove('active');
+  };
+
+  var onClickOpenContacts = function onClickOpenContacts() {
+    modal.classList.add('active');
+    addListeners();
+  };
+
+  var onOverlayClickCloseContacts = function onOverlayClickCloseContacts(evt) {
+    if (!modal.contains(evt.target)) {
+      closeContacts();
+    }
+  };
+
+  var onEscClickCloseContacts = function onEscClickCloseContacts(evt) {
+    if (evt.key === 'Esc' || evt.key === 'Escape') {
+      closeContacts();
+    }
+  };
+
+  var onCloserClickCloseContacts = function onCloserClickCloseContacts() {
+    closeContacts();
+  };
+
+  opener.addEventListener('click', onClickOpenContacts);
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/faqTextToggler.js":
 /*!***********************************************!*\
   !*** ./src/scripts/modules/faqTextToggler.js ***!
@@ -16155,6 +16212,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_faqTextToggler__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/mapSwitcher */ "./src/scripts/modules/mapSwitcher.js");
 /* harmony import */ var _modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_mapSwitcher__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_contactOpener__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/contactOpener */ "./src/scripts/modules/contactOpener.js");
+/* harmony import */ var _modules_contactOpener__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_contactOpener__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 

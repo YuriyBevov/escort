@@ -5,3 +5,4 @@ import './modules/swiper';
 import './modules/accordeon';
 import './modules/faqTextToggler';
 import './modules/mapSwitcher';
+import './modules/contactOpener';

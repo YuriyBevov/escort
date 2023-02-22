@@ -14,17 +14,22 @@ header.header
       include ../components/nav
 
     .header__contacts
-      .header__phones
-        include ../components/phones
-      .header__social
-        include ../components/social
 
-      a(href="#").main-btn.header__callback Заказать звонок
-
-    .header__mobile-contacts
-      button.header__mobile-contacts-opener(aria-label="Показать контакты")
+      button.header__contacts-mobile-opener(aria-label="Показать контакты")
         svg(width="30" height="30")
           use(xlink:href="./assets/sprite.svg#icon-phone")
+      .header__contacts-container
+        button.header__contacts-mobile-closer(aria-label="Закрыть контакты")
+          svg(width="24" height="24")
+            use(xlink:href="./assets/sprite.svg#icon-close")
+        .header__phones
+          include ../components/phones
+        .header__social
+          include ../components/social
+
+        a(href="#").main-btn.header__callback Заказать звонок
+
+    .header__mobile-contacts
       .header__social
         include ../components/social
 
