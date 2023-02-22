@@ -147,14 +147,34 @@
     svg {
       fill: var(--success);
     }
+
+    &:hover,
+    &:focus {
+      span {
+        color: var(--success);
+      }
+    }
+  }
+
+  &--blue {
+
+    border-color: var(--skyblue);
+
+    svg {
+      fill: var(--skyblue);
+    }
+
+    &:hover,
+    &:focus {
+      span {
+        color: var(--skyblue);
+      }
+    }
   }
 
   &:hover,
   &:focus {
     background-color: var(--white);
-    span {
-      color: var(--success);
-    }
   }
 }
 

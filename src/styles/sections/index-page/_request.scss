@@ -9,15 +9,3 @@
     padding: 20px 0;
   }
 }
-
-.inner .request {
-  position: relative;
-  max-width: 1140px;
-  margin: 0 auto;
-
-  &::after {
-    top: 0;
-    left: 0;
-    @extend .section-line;
-  }
-}

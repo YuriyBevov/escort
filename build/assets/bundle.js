@@ -247,6 +247,38 @@ if (reviewSlider) {
   });
 }
 
+var thumbSlider = document.querySelector('.thumb-slider');
+
+if (thumbSlider) {
+  var sliderThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".thumb-slider-thumbs", {
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    spaceBetween: 10,
+    direction: 'vertical'
+  });
+  var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".thumb-slider", {
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: 'horizontal',
+    spaceBetween: 25,
+    breakpoints: {
+      635: {
+        direction: 'vertical'
+      }
+    },
+    navigation: {
+      nextEl: '.thumb-slider-thumbs-button-next',
+      prevEl: '.thumb-slider-thumbs-button-prev'
+    },
+    thumbs: {
+      swiper: sliderThumbs
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./node_modules/imask/esm/_rollupPluginBabelHelpers-67bba7fb.js":

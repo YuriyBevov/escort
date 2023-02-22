@@ -1,3 +1,16 @@
+include ../../mixins/catalog
+
 section.model-info
   .container
-    h1 Женя
+    .model-info__grid
+      .model-info__grid-side
+        include ../../components/thumb-slider
+      .model-info__grid-side
+        include ../../components/model
+
++catalog({
+  title: 'Другие девушки',
+  titleClass: 'title-md',
+  isInner: false,
+  isElementPage: true
+})

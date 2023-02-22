@@ -1,0 +1,23 @@
+.model-info {
+  margin-bottom: 40px;
+
+  .model {
+    max-width: 600px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: auto 440px;
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+
+    @include m-b-down(1140px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-side {
+      overflow: hidden;
+      max-height: 800px;
+    }
+  }
+}
