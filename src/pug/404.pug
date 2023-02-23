@@ -1,0 +1,19 @@
+extends layouts/inner-layout.pug
+
+block variables
+  -
+    const title = ""
+    const desc = ""
+    const keywords = ""
+
+block content
+  section.not-found
+    .container.not-found__container
+      h1.clipped-title.not-found__title 404
+
+      p.not-found__desc Страница не найдена!<br/> Вы перешли по неправильной ссылке или страница была удалена.
+
+      a(href="/").main-btn.not-found__link Перейти на главную страницу
+
+block modals
+  //include ./modals/...

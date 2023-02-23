@@ -32,10 +32,9 @@
   }
 
   &__name {
-    display: inline-block;
     font-family: var(--secondary-font);
     font-size: 18px;
-    @extend .main-link-transition;
+    font-weight: 400;
     margin-bottom: 15px;
   }
 
@@ -68,7 +67,9 @@
   &--locked {
     position: relative;
 
-
+    .model-card__top {
+      max-height: 100%;
+    }
   }
 
   &__locked {

@@ -17,7 +17,9 @@
 
     &-side {
       overflow: hidden;
-      max-height: 800px;
+      &--slider {
+        max-height: 800px;
+      }
     }
   }
 }

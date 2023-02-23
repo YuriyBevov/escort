@@ -10,7 +10,7 @@
   }
 
   &__char {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     &-item {
       display: grid;
@@ -39,9 +39,14 @@
   }
 
   &__desc {
-    font-size: 14px;
-    color: var(--light);
-    margin-bottom: 30px;
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--light);
+      margin-bottom: 30px;
+    }
+
+    margin-bottom: 15px;
   }
 
   &__request {

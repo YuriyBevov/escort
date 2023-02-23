@@ -22,3 +22,18 @@
   <div class="swiper-button-prev thumb-slider-thumbs-button-prev"></div>
   <div class="swiper-button-next thumb-slider-thumbs-button-next"></div>
 
+  .video-preview
+    .video-preview__title
+      svg(width="12" height="10")
+        use(xlink:href="./assets/sprite.svg#icon-youtube")
+      span Видео
+
+    .video-preview__content
+      video(type="video/mp4" src="./assets/video/alena-video.mp4")
+
+      button.video-preview__btn
+        svg(width="30" height="30")
+          use(xlink:href="./assets/sprite.svg#icon-play")
+
+
+

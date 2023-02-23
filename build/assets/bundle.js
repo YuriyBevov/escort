@@ -245,7 +245,7 @@ if (nav) {
     button = null;
   };
 
-  function openSubMenu() {
+  function openSubMenu(evt) {
     inner.classList.add('active');
     button.classList.add('active');
     document.addEventListener('click', onOverlayClickCloseInner);
@@ -256,7 +256,6 @@ if (nav) {
   triggers.forEach(function (trigger) {
     trigger.addEventListener('click', function (evt) {
       evt.stopPropagation();
-      evt.preventDefault();
       inner = trigger.nextElementSibling;
       button = trigger;
       openSubMenu();
