@@ -22,6 +22,7 @@ if(burger) {
   }
 
   const onOverlayClickCloseNav = (evt) => {
+    evt.stopPropagation();
     if(!header.contains(evt.target)) {
       onClickToggleNav();
     }

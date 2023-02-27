@@ -39,7 +39,7 @@ if(thumbSlider) {
     watchOverflow: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    spaceBetween: 10,
+    spaceBetween: 3,
     direction: 'vertical',
   });
 

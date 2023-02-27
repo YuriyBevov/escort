@@ -4,13 +4,16 @@
   align-items: flex-start;
 
   img {
-    max-width: 176px;
+    max-width: 166px;
     margin-bottom: 3px;
+    margin-right: 10px;
+    object-fit: contain;
   }
 
   span {
     display: inline-block;
     font-size: 12px;
+    letter-spacing: 0.06em;
     color: var(--white);
   }
 

@@ -24,9 +24,44 @@ body {
   font-weight: 400;
   color: var(--white);
   background-color: var(--main-bg-color);
+  overflow: hidden;
+  overflow-y: auto;
 
   &.body-locked {
     overflow: hidden;
+  }
+
+  &::before {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: -1;
+
+    content: '';
+    width: 100%;
+    max-width: 878px;
+    height: 887px;
+
+    background-image: url("../assets/img/dec-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+
+    content: '';
+    width: 100%;
+    max-width: 755px;
+    height: 70%;
+    max-height: 1767px;
+
+    background-image: url("../assets/img/dec-light.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

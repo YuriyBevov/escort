@@ -1,5 +1,22 @@
 .footer {
   padding-bottom: 40px;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    content: '';
+    width: 850px;
+    height: 850px;
+    background-image: url("../assets/img/dec-footer.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -106,6 +123,7 @@
 
     span {
       font-size: 12px;
+      color: #555558;
     }
   }
 

@@ -1,11 +1,11 @@
 .map {
   &__header {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,330px);
     grid-column-gap: 20px;
     margin-bottom: 30px;
 
-    @include m-b-down(475px) {
+    @include m-b-down(681px) {
       grid-template-columns: 1fr;
       grid-row-gap: 20px;
     }

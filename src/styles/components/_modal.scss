@@ -1,0 +1,38 @@
+#modal_tel {
+  display: none;
+  width: 100%;
+  max-width: 630px;
+  background-image: url("../assets/img/face-bg.png");
+  background-color:  var(--modal-bg);
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 32%);
+  padding: 70px;
+
+  @include m-b-mobile-lg-down {
+    padding: 60px 20px;
+  }
+
+  button {
+    @extend .button-default;
+    @extend .flex-centered-content;
+
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+#modal_video {
+  display: none;
+  padding: 0;
+
+  video {
+    display: block;
+  }
+}

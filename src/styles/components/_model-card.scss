@@ -32,10 +32,18 @@
   }
 
   &__name {
+    display: inline-block;
     font-family: var(--secondary-font);
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
+
+    transition: color var(--main-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent);
+    }
   }
 
   &__info {

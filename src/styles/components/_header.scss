@@ -190,7 +190,7 @@
           padding: 20px;
           background-color: rgba(61, 58, 65, 0.9);
           border-radius: var(--border-radius);
-          z-index: 89;
+          z-index: 99;
 
           &::before {
             position: absolute;
@@ -222,6 +222,7 @@
 
           .header__callback {
             min-height: 40px;
+            width: 100%;
             padding: 20px;
           }
         }

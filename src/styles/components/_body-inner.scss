@@ -11,6 +11,15 @@
     background-image: url("../assets/img/hero-bg.jpg");
     background-size: cover;
     background-position: center;
+
+    .footer::after {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 
 

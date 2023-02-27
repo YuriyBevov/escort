@@ -35,7 +35,11 @@ if(nav) {
   };
 
   function openSubMenu(evt) {
-    inner.classList.add('active');
+
+    if(inner) {
+      inner.classList.add('active');
+    }
+
     button.classList.add('active');
     document.addEventListener('click', onOverlayClickCloseInner);
     button.addEventListener('click', onButtonClickCloseInner);

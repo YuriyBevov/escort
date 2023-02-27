@@ -20,7 +20,7 @@
 
       &__title {
         @extend .flex-centered-content;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         height: 15px;
 
         span {
@@ -111,7 +111,8 @@
     overflow: hidden;
     align-self: flex-end;
     width: 140px;
-    height: calc(100% - 225px);
+    height: calc(100% - 230px);
+    margin-bottom: 30px;
 
     @include m-b-down(634px) {
       display: none;
@@ -147,10 +148,10 @@
     &-button-prev,
     &-button-next {
       width: 140px;
-      height: 40px;
+      height: 20px;
       background-color: var(--thumb-slider-btn-bg);
 
-      top: 175px;
+      top: 170px;
       left: initial;
       right: 0;
 
@@ -179,7 +180,7 @@
     }
 
     &-button-next {
-      top: calc(100% - 40px);
+      top: calc(100% - 20px);
 
       transform: rotate(180deg);
     }

@@ -52,6 +52,8 @@ if (burger) {
   };
 
   var onOverlayClickCloseNav = function onOverlayClickCloseNav(evt) {
+    evt.stopPropagation();
+
     if (!header.contains(evt.target)) {
       onClickToggleNav();
     }
@@ -72,20 +74,15 @@ var opener = document.querySelector('.header__contacts-mobile-opener');
 
 if (opener) {
   var contactModal = document.querySelector('.header__contacts');
-  var closer = document.querySelector('.header__contacts-mobile-closer');
 
   var removeListeners = function removeListeners() {
     document.removeEventListener('click', onOverlayClickCloseContacts);
     document.removeEventListener('keydown', onEscClickCloseContacts);
-    closer.removeEventListener('click', onEscClickCloseContacts);
-    opener.addEventListener('click', onClickOpenContacts);
   };
 
   var addListeners = function addListeners() {
     document.addEventListener('click', onOverlayClickCloseContacts);
     document.addEventListener('keydown', onEscClickCloseContacts);
-    closer.addEventListener('click', onCloserClickCloseContacts);
-    opener.removeEventListener('click', onClickOpenContacts);
   };
 
   var closeContacts = function closeContacts() {
@@ -94,8 +91,12 @@ if (opener) {
   };
 
   var onClickOpenContacts = function onClickOpenContacts() {
-    contactModal.classList.add('active');
-    addListeners();
+    if (!contactModal.classList.contains('active')) {
+      contactModal.classList.add('active');
+      addListeners();
+    } else {
+      closeContacts();
+    }
   };
 
   var onOverlayClickCloseContacts = function onOverlayClickCloseContacts(evt) {
@@ -108,10 +109,6 @@ if (opener) {
     if (evt.key === 'Esc' || evt.key === 'Escape') {
       closeContacts();
     }
-  };
-
-  var onCloserClickCloseContacts = function onCloserClickCloseContacts() {
-    closeContacts();
   };
 
   opener.addEventListener('click', onClickOpenContacts);
@@ -246,7 +243,10 @@ if (nav) {
   };
 
   function openSubMenu(evt) {
-    inner.classList.add('active');
+    if (inner) {
+      inner.classList.add('active');
+    }
+
     button.classList.add('active');
     document.addEventListener('click', onOverlayClickCloseInner);
     button.addEventListener('click', onButtonClickCloseInner);
@@ -312,7 +312,7 @@ if (thumbSlider) {
     watchOverflow: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    spaceBetween: 10,
+    spaceBetween: 3,
     direction: 'vertical'
   });
   var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".thumb-slider", {
