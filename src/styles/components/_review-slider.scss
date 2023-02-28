@@ -1,6 +1,12 @@
 .review-slider {
   overflow: hidden;
+
+  padding: 0 15px;
   padding-top: 25px;
+  @include m-b-tablet-down {
+    padding: 0;
+    padding-top: 25px;
+  }
 
   &-controls {
     position: relative;
@@ -69,8 +75,11 @@
   }
 
   .swiper-slide {
-    width: 100%;
-    max-width: 410px;
+    width: 410px;
     border-radius: var(--border-radius);
+
+    @include m-b-down(471px) {
+      width: 100%;
+    }
   }
 }

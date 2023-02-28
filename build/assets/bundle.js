@@ -284,22 +284,26 @@ if (reviewSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](reviewSlider, {
     slidesPerView: 1,
     spaceBetween: 25,
-    loop: true,
+
+    /*loop: true,
     initialSlide: 2,
     slidesOffsetBefore: 0,
+    loopedSlides: 10,*/
     navigation: {
       nextEl: ".review-slider-button-next",
       prevEl: ".review-slider-button-prev"
     },
     breakpoints: {
       410: {
-        slidesPerView: 'auto',
-        slidesOffsetBefore: 0
-      },
-      768: {
-        slidesPerView: 'auto',
-        slidesOffsetBefore: 250
+        slidesPerView: 'auto' //slidesOffsetBefore: 0,
+
       }
+      /*,
+      768: {
+       slidesPerView: 'auto',
+       slidesOffsetBefore: 250,
+      }*/
+
     }
   });
 }

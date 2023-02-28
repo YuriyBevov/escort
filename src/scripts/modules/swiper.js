@@ -8,9 +8,10 @@ if(reviewSlider) {
   new Swiper(reviewSlider, {
     slidesPerView: 1,
     spaceBetween: 25,
-    loop: true,
+    /*loop: true,
     initialSlide: 2,
     slidesOffsetBefore: 0,
+    loopedSlides: 10,*/
 
     navigation: {
       nextEl: ".review-slider-button-next",
@@ -21,12 +22,12 @@ if(reviewSlider) {
 
       410: {
         slidesPerView: 'auto',
-        slidesOffsetBefore: 0,
-      },
+        //slidesOffsetBefore: 0,
+      }/*,
       768: {
         slidesPerView: 'auto',
         slidesOffsetBefore: 250,
-      }
+      }*/
     }
   });
 }

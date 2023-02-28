@@ -2426,7 +2426,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .review-slider {
   overflow: hidden;
+  padding: 0 15px;
   padding-top: 25px;
+}
+@media (max-width: 767px) {
+  .review-slider {
+    padding: 0;
+    padding-top: 25px;
+  }
 }
 .review-slider-controls {
   position: relative;
@@ -2488,9 +2495,13 @@ h1, h2, h3, h4, h5, h6, p {
   fill: var(--accent);
 }
 .review-slider .swiper-slide {
-  width: 100%;
-  max-width: 410px;
+  width: 410px;
   border-radius: var(--border-radius);
+}
+@media (max-width: 471px) {
+  .review-slider .swiper-slide {
+    width: 100%;
+  }
 }
 
 .review-card {
@@ -3827,6 +3838,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   margin-right: 40px;
 }
+
 .faq {
   margin-bottom: 80px;
 }
