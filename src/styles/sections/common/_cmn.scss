@@ -61,35 +61,6 @@
       font-size: 16px;
       color: var(--light);
       max-width: 710px;
-      //margin-bottom: 27px;
-      //padding-left: 75px;
-
-      /*@include m-b-tablet-down {
-        padding-left: 40px;
-      }
-
-      @include m-b-mobile-lg-down {
-        padding-left: 15px;
-      }*/
-
-      /*&::before {
-        position: absolute;
-        top: 10px;
-        left: 60px;
-        content: "";
-        width: 4px;
-        height: 4px;
-        background-color: var(--light);
-        border-radius: 50%;
-
-        @include m-b-tablet-down {
-          left: 25px;
-        }
-
-        @include m-b-mobile-lg-down {
-          left: 0;
-        }
-      }*/
     }
   }
 }
