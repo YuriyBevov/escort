@@ -11,12 +11,6 @@
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-fluid-width: var(--content-fluid-width);
 
-    // colors
-    /*--light-color: #fff;
-    --accent-color: #d52027;
-    --dark-color: #141024;
-    --text-color: rgba(20, 16, 36, 0.7);*/
-
     --white: #ffffff;
     --accent: #af995e;
     --light: #b4b6bb;
@@ -26,13 +20,14 @@
     --success: #327448;
     --skyblue: #5297ac;
     --thumb-slider-btn-bg: #363338;
+    --darknest: #1f1d23;
 
     --model-card-bg: #1d1b21;
     --info: #a29fa8;
     --violet: #949299;
 
     --main-bg-color: var(--dark);
-    --modal-bg: #1f1d23;
+    --modal-bg: var(--darknest);
 
     --main-transition: 0.3s 0.02s ease;
     --slow-transition: 0.7s 0.02s ease;

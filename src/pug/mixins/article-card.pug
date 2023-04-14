@@ -1,0 +1,10 @@
+mixin article-card(data)
+  .article-card
+    a(href="article-element.html").article-card__img
+      img(src="./assets/img/article-photo.png" alt="Картинка для статьи" width="400" height="285" )
+
+    span.article-card__title!= data.title
+
+    p.article-card__text!= data.text
+
+    a(href="article-element.html").article-card__link  Подробнее

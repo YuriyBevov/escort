@@ -1,16 +1,25 @@
-section.articles
-  .container
-    h1.section-title.title-lg.clipped-title Статьи
+include ../../mixins/articles
 
-    ul.articles__list
-      li.articles__list-item
-        include ../../components/article-card
++articles({
+  title: 'Статьи',
+  titleClass: 'title-lg',
 
-      li.articles__list-item
-        include ../../components/article-card
-
-      li.articles__list-item
-        include ../../components/article-card
-
-      li.articles__list-item
-        include ../../components/article-card
+  articles: [
+    {
+      title: 'Длинный заголовок, на целых две строки, с переносом на новую строку',
+      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, in consequatur commodi a assumenda numquam maiores tempora nam id itaque voluptatem reiciendis odio non impedit? Expedita ea asperiores ipsa maxime!'
+    },
+    {
+      title: 'Короткий заголовок',
+      text: 'Совсем немного текста'
+    },
+    {
+      title: 'Короткий заголовок',
+      text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, in consequatur commodi a assumenda numquam maiores tempora nam id itaque voluptatem reiciendis odio non impedit? Expedita ea asperiores ipsa maxime ! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, in consequatur commodi a assumenda numquam maiores tempora nam id itaque voluptatem reiciendis odio non impedit? Expedita ea asperiores ipsa maxime!'
+    },
+    {
+      title: 'Как подготовить интервью компании?',
+      text: '123317, г. Москва, Пресненская наб., д. 12, ММДЦ "Москва Сити",Башня Федерация "Запад".'
+    }
+  ]
+})

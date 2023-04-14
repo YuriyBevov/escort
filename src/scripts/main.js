@@ -6,3 +6,5 @@ import './modules/accordeon';
 import './modules/faqTextToggler';
 import './modules/mapSwitcher';
 import './modules/contactOpener';
+import './modules/textTruncate';
+//import './modules/setTitleHeight';

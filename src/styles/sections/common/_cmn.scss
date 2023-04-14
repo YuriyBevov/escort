@@ -64,3 +64,50 @@
     }
   }
 }
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.info-note,
+blockquote {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 70px;
+  padding: 40px;
+  padding-top: 60px;
+  margin-bottom: 60px;
+
+  @include m-b-tablet-down {
+    padding: 30px;
+    padding-top: 50px;
+  }
+
+  @include m-b-mobile-lg-down {
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: 45px;
+
+    @include m-b-mobile-lg-down {
+      top: -40px;
+      left: 5px;
+    }
+
+    content: '';
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url(../assets/img/icon-info.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  background-color: var(--darknest);
+}

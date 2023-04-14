@@ -1,0 +1,17 @@
+include ./article-card
+
+mixin articles(data)
+  section.articles
+    .container
+      if !data.isInner
+        h1.clipped-title.section-title(class= data.titleClass)!= data.title
+      else
+        h3.section-title.title-lg(class= data.titleClass)!= data.title
+
+      ul.articles__list
+        each article in data.articles
+          li.articles__list-item
+            +article-card({
+              title: article.title,
+              text: article.text
+            })

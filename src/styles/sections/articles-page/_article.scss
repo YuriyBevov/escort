@@ -1,0 +1,36 @@
+.article {
+  margin-bottom: 80px;
+
+  &__content {
+    img {
+      max-height: 400px;
+
+      @include m-b-tablet-lg-down {
+        float: none;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    table {
+      @extend .multicolored-table;
+      min-width: 720px;
+    }
+
+    ol {
+      padding: 0;
+      margin-bottom: 30px;
+      li {
+        font-size: 16px;
+        font-weight: 300;
+        list-style-position: inside;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
